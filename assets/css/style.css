@@ -1,59 +1,60 @@
 * {
     box-sizing: border-box;
 }
-
+ 
 body {
     margin: 0;
+    background-color: var(--lightGrey)
 }
-
+ 
 /* TYPOGRAPHY */
 /* ___________________________________ */
 /* Brødtekst */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+ 
 /* Overskrifter */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+ 
 /* VARIABLES */
 /* ___________________________________ */
-
+ 
 :root {
   /* Farver */
-
+ 
   --deepOrange: #D08124;
   --lightBrown: #772608;
   --lightGrey: #F7F4F4;
   --lightSand: #87ceeb;
   --navBackground: #F1D9BF;
-
+ 
   /* Spacere */
-
+ 
   --mobileSmallSpacer: 30px;
   --mobileMediumSpacer: 38px;
   --mobileLargeSpacer: 45px;
-
+ 
   --desktopSmallSpacer: 45px;
   --desktopMediumSpacer: 60px;
   --dekstopLargeSpacer: 90px;
-
+ 
   /* Font weight */
-
+ 
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
 }
-
+ 
 /* GENERAL STYLING */
 /* ___________________________________ */
-
+ 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
   }
-  
+ 
   h1,
   h2,
   h3,
@@ -64,65 +65,107 @@ body {
     font-weight: var(--fw-bold);
     line-height: 150%;
   }
-  
+ 
   p {
     font-family: "Open Sans", sans-serif;
     font-weight: var(--fw-regular);
     line-height: 150%;
   }
-  
+ 
   img {
     border-radius: 20px;
   }
-  
+ 
   h1 {
     font-size: 48px;
     font-weight: var(--fw-bold);
     text-align: center;
     padding-block: var(--desktopMediumSpacer);
   }
-
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles HEADER */
-
+ 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: var(--desktopSmallSpacer);
-    background-color: var(--navBackground); 
+    background-color: var(--navBackground);
   }
-  
+ 
   nav a {
     text-decoration: none;
     color: var(--lightBrown);
     font-weight: bold;
     font-size: 20px;
   }
-
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Footer */
-
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Forside */
-
+ 
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  overflow: hidden;
+}
+ 
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+ 
+/* Dark overlay */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+ 
+/* Bottom-left heading */
+.video-container h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+ 
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Åbningstider */
-
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Bestil tid mekaniker */
-
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Bestil bord Cafe */
-
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Kontakt */
-
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Om os */
-
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Køb cykler */
-
+ 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Begivenheder */
