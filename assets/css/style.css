@@ -23,7 +23,7 @@ body {
  
   --deepOrange: #D08124;
   --lightBrown: #772608;
-  --lightGrey: #F7F4F4;
+  --lightGrey: #F7F4F4; 
   --lightSand: #87ceeb;
   --navBackground: #F1D9BF;
  
@@ -70,10 +70,6 @@ body {
     font-family: "Open Sans", sans-serif;
     font-weight: var(--fw-regular);
     line-height: 150%;
-  }
- 
-  img {
-    border-radius: 20px;
   }
  
   h1 {
@@ -160,7 +156,32 @@ nav {
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Kontakt */
- 
+ .kontakt-section {
+  padding: 2rem;
+  background-color: var(--lightGrey)
+}
+
+.kontakt-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.kontakt-info h1{
+  text-align: left;
+}
+
+.kontakt-container p {
+  font-size: 1.2rem;
+}
+
+.p-information-brødtekst {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: var(--desktopSmallSpacer);
+}
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Om os */
  
