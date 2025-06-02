@@ -24,6 +24,7 @@ body {
   --lightBrown: #772608;
   --lightGrey: #F7F4F4;
   --lightSand: #87ceeb;
+  --navBackground: #F1D9BF;
 
   /* Spacere */
 
@@ -50,7 +51,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+    font-family: "Open Sans", sans-serif;
   }
   
   h1,
@@ -84,6 +85,20 @@ body {
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles HEADER */
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--desktopSmallSpacer);
+    background-color: var(--navBackground); 
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--lightBrown);
+    font-weight: bold;
+    font-size: 20px;
+  }
 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Footer */
