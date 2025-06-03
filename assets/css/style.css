@@ -42,6 +42,7 @@ body {
   --desktopSmallSpacer: 45px;
   --desktopMediumSpacer: 60px;
   --dekstopLargeSpacer: 90px;
+  --desktopXLargeSpacer: 110px;
  
   /* Font weight */
  
@@ -97,26 +98,125 @@ body {
 /* Her styles HEADER */
  
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--desktopSmallSpacer);
-    background-color: var(--navBackground);
-    position: sticky;
-    top: 0;
-    z-index: 3;
-  }
- 
-  nav a {
-    text-decoration: none;
-    color: var(--lightBrown);
-    font-weight: bold;
-    font-size: 20px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--desktopXLargeSpacer);
+  gap: var(--desktopSmallSpacer);
+  background-color: var(--navBackground);
+  position: sticky;
+  z-index: 3;
+}
+
+nav a {
+  position: relative;            
+  text-decoration: none;
+  color: var(--lightBrown);
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 2px;           
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: var(--lightBrown);
+  transition: transform 0.2s ease;
+}
+
+nav a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Footer */
  
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #8b6f4d;
+  color: white;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.footer-column {
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-column p, 
+.footer-column ul {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-column ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-column ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: transform 0.2s ease;
+}
+
+.footer-column ul li a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-mascot {
+  width: 60px;
+  height: auto;
+}
+
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Forside */
  
