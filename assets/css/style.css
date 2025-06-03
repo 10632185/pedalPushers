@@ -26,6 +26,7 @@ body {
   --lightGrey: #F7F4F4; 
   --lightSand: #87ceeb;
   --navBackground: #F1D9BF;
+  --sort: #000000;
  
   /* Spacere */
  
@@ -78,6 +79,14 @@ body {
     text-align: center;
     padding-block: var(--desktopMediumSpacer);
   }
+
+  h2{
+    font-size: 32px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles HEADER */
@@ -128,7 +137,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
  
@@ -144,6 +153,72 @@ nav {
   margin: 0;
 }
  
+.forsideIntroText{
+    text-align: center;
+    color: var(--sort);
+    font-weight: 400;
+    padding-top: var(--desktopSmallSpacer);
+}
+
+.forsideDiagonalBilleder {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .forsideVenstreSide,
+  .forsideHoejreSide {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .forsideVenstreSide {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  }
+  
+  .forsideHoejreSide {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  .forsideVenstreSide img,
+  .forsideHoejreSide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .forsideVenstreSide h2,
+  .forsideHoejreSide h2 {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .forsideVenstreSide h2 {
+    top: 30%;
+    left: 0;
+  }
+  
+  .forsideHoejreSide h2 {
+    bottom: 10%;
+    left: 0;
+  }
+
+  .forsideVenstreSide,
+.forsideHoejreSide {
+  z-index: 1;
+}
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Åbningstider */
@@ -182,6 +257,8 @@ nav {
   line-height: 1.5;
   margin-bottom: var(--desktopSmallSpacer);
 }
+
+
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Om os */
  
