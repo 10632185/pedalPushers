@@ -300,6 +300,46 @@ nav a:hover::after {
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Åbningstider */
  
+
+.hero {
+  background-image: url("cafe-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  padding: 40px 20px;
+  gap: 40px;
+  background: #fdf6f0;
+}
+
+.column {
+  flex: 1;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+.map {
+  text-align: center;
+  padding: 20px;
+}
+
+.map img {
+  width: 80%;
+  max-width: 600px;
+}
+
+
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Bestil tid mekaniker */
  
