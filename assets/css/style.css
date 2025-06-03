@@ -349,13 +349,17 @@ nav a:hover::after {
     margin-bottom: 1rem;
    }
 
-  .forsideKnap{
-    background-color: var(--interaktivElement);
-    color: var(--pageBackground);
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    border: 0;
-  }
+  .forsideKnap {
+  display: inline-block;
+  background-color: var(--interaktivElement);
+  color: var(--pageBackground);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
 
   .forsideKnap a{
     text-decoration: none;
