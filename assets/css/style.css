@@ -92,6 +92,10 @@ body {
   h3{
     font-size: 20px;
   }
+
+  body{
+    background-color: var(--pageBackground);
+  }
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles HEADER */
@@ -196,6 +200,66 @@ nav {
     height: 35vh;
     object-fit: cover;
    }
+
+/* Waffles & Chaffles */
+
+.forsideWafflesAndChaffles{
+  text-align: center;
+  margin-top: var(--dekstopLargeSpacer);
+  margin-bottom: 0;
+}
+
+.forsideWafflesAndChaffles h3{
+  font-size: xx-large;
+}
+
+/* 3 "cards" */
+
+.forsideContainer {
+   display: flex;
+   justify-content: center;
+   gap: var(--dekstopLargeSpacer);
+   margin-top: var(--dekstopLargeSpacer);
+   
+  }
+  
+  .forsideCard {
+   background-color: var(--pageBackground);
+   padding: 2rem 1rem;
+   width: 18.75rem;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+  }
+  
+  .forsideIcon img {
+   width: 8rem;
+   height: 8rem;
+   margin-bottom: 1rem;
+  }
+  
+  .forsideCard h2 {
+   margin-bottom: 1rem;
+   align-items: center;
+  }
+
+  .forsideCard p {
+    margin-bottom: 1rem;
+   }
+
+  .forsideKnap{
+    background-color: var(--interaktivElement);
+    color: var(--pageBackground);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 0;
+  }
+
+  .forsideKnap a{
+    text-decoration: none;
+    color: var(--pageBackground);
+  }
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Åbningstider */
