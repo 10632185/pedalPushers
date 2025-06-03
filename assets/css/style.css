@@ -109,6 +109,7 @@ nav {
   gap: var(--desktopSmallSpacer);
   background-color: var(--navBackground);
   position: sticky;
+  top: 0;
   z-index: 3;
 }
 
