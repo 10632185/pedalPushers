@@ -27,6 +27,11 @@ body {
   --lightSand: #87ceeb;
   --navBackground: #F1D9BF;
   --sort: #000000;
+  --cardBackground: #F1D9BF;
+  --pageBackground: #FFF4E8;
+  --navText: #772608;
+  --interaktivElement: #9E3B17;
+  --footerBackground: #8B7459;
  
   /* Spacere */
  
@@ -98,6 +103,9 @@ nav {
     align-items: center;
     gap: var(--desktopSmallSpacer);
     background-color: var(--navBackground);
+    position: sticky;
+    top: 0;
+    z-index: 3;
   }
  
   nav a {
@@ -161,65 +169,34 @@ nav {
     padding-top: var(--desktopSmallSpacer);
 }
 
-.forsideDiagonalBilleder {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+/* 50/50 Billede */
+
+.forsideCTAWrapper{
+  display: flex;
+  margin-top: var(--dekstopLargeSpacer);
+}
+
+.forsideVenstreSide, .forsideHoejreSide {
+   width: 40%;
+   background-color: var(--lightGrey);
+   overflow: hidden;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   margin-left: var(--dekstopLargeSpacer);
+   margin-right: var(--dekstopLargeSpacer);
+   height: 25%;
+   background: var(--lightGrey); /* FIND UD AF RIGTIG FARVE, MEDMINDRE KANU KAN COOKE 50/50 ORDENTLIGT */
   }
   
-  .forsideVenstreSide,
-  .forsideHoejreSide {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .forsideVenstreSide {
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-  }
-  
-  .forsideHoejreSide {
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-  
-  .forsideVenstreSide img,
-  .forsideHoejreSide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .forsideVenstreSide h2,
-  .forsideHoejreSide h2 {
-    position: absolute;
-    color: white;
-    font-size: 2.5rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-  }
-  
-  .forsideVenstreSide h2 {
-    top: 30%;
-    left: 0;
-  }
-  
-  .forsideHoejreSide h2 {
-    bottom: 10%;
-    left: 0;
+  .forsideVenstreSide h2, .forsideHoejreSide h2 {
+   padding: var(--desktopSmallSpacer);
   }
 
-  .forsideVenstreSide,
-.forsideHoejreSide {
-  z-index: 1;
-}
+   .forsideImg {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+   }
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Åbningstider */
