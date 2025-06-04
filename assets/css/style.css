@@ -228,7 +228,7 @@ nav a:hover::after {
 .video-container {
   position: relative;
   width: 100%;
-  height: 65vh;
+  height: 70vh;
   overflow: hidden;
 }
  
@@ -257,50 +257,104 @@ nav a:hover::after {
 /* Bottom-left heading */
 .video-container h1 {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  padding-block: 0;
+  bottom: 1rem;
+  left: 90px;
   z-index: 2;
-  color: white;
-  font-size: 4rem;
+  color: var(--pageBackground);
+  font-size: 64px;
   font-weight: bold;
   margin: 0;
 }
- 
-.forsideIntroText{
-    text-align: center;
-    color: var(--sort);
-    font-weight: 400;
-    padding-top: var(--desktopSmallSpacer);
-}
 
-/* 50/50 Billede */
-
-.forsideCTAWrapper{
+/* Forside Intro section */
+.forsideIntroSection {
   display: flex;
-  margin-top: var(--dekstopLargeSpacer);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--desktopMediumSpacer);
+  text-align: center;
 }
 
-.forsideVenstreSide, .forsideHoejreSide {
-   width: 40%;
-   background-color: var(--lightGrey);
-   overflow: hidden;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-   text-align: center;
-   margin-left: var(--dekstopLargeSpacer);
-   margin-right: var(--dekstopLargeSpacer);
-   height: 25%;
-   background: var(--lightGrey); /* FIND UD AF RIGTIG FARVE, MEDMINDRE KANU KAN COOKE 50/50 ORDENTLIGT */
-  }
-  
-  .forsideVenstreSide h2, .forsideHoejreSide h2 {
-   padding: var(--desktopSmallSpacer);
-  }
+.forsideIntroSection h3{
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: var(--desktopSmallSpacer);
+}
 
-   .forsideImg {
-    width: 100%;
-    height: 35vh;
-    object-fit: cover;
-   }
+.forsideIntroSection p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-bottom: var(--desktopSmallSpacer);
+}
+
+/* 2 img cards med links, 50/50 side */
+.forsideCTAWrapper {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-inline: var(--dekstopLargeSpacer);
+  /* inline padding tog siderne og gav spacers men seb synes det ser mørkeligt ud fordi det kommer til at ligne en ny "HERO".. er enig men synes det ser bedre ud uden spacers fordi der er hover effects på som zoomer ind */
+}
+
+.forsideSide {
+  position: relative;
+  flex: 1;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+}
+
+.forsideImg {
+  width: 100%;
+  /* height: 80vh; */
+  /* den normale height var 80 vh, men vi kan lege lidt med det og så se hvad vi bliver enige om i gruppen :) */
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* 50/50 img overlays */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.582);
+  transition: background-color 0.5s ease;
+  z-index: 1;
+}
+
+/* center text på imgs */
+.forsideText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Hover Effects med overlay og zoom effect */
+.forsideSide:hover .overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.forsideSide:hover .forsideImg {
+  transform: scale(1.1);
+}
+
 
 /* Waffles & Chaffles */
 
@@ -310,12 +364,15 @@ nav a:hover::after {
   margin-bottom: 0;
 }
 
+.forsideWafflesAndChaffles h2{
+  font-size: 3rem;
+}
+
 .forsideWafflesAndChaffles h3{
   font-size: xx-large;
 }
 
-/* 3 "cards" */
-
+/* 3 "cards-CTA" */
 .forsideContainer {
    display: flex;
    justify-content: center;
