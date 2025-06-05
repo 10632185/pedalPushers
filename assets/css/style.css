@@ -142,6 +142,7 @@ nav a:hover::after {
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Footer */
+<<<<<<< HEAD
  
 
 .footer {
@@ -221,6 +222,8 @@ nav a:hover::after {
   width: 60px;
   height: auto;
 }
+=======
+>>>>>>> Om-os
 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Forside */
@@ -546,7 +549,45 @@ nav a:hover::after {
 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Om os */
- 
+
+.omOsTitel{
+  text-align: left;
+  margin-left: var(--dekstopLargeSpacer);
+}
+
+.omOs-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: var(--dekstopLargeSpacer);
+  margin-right: var(--dekstopLargeSpacer);
+
+}
+.omOs-section h1 {
+ padding-top: 0;  
+ text-align: left;     
+}
+
+.omOs {
+  flex: 1;             
+  min-width: 300px;          
+}
+
+.omOs-section img {
+  flex: 1;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: 0% 30%;
+  margin-bottom: var(--dekstopLargeSpacer);
+}
+
+.omOs p {
+  max-width: 40rem;
+}
+
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Køb cykler */
  
