@@ -191,7 +191,8 @@ nav a:hover::after {
 }
 
 .footer-column ul li a::after {
-  content: "";
+  content: ""; 
+  /* SPØRG DAN OM DETTE -- CONTENT "" -- MÅ BRUGES? DET INDSÆTTER/GENERERE NYT CSS INDE I " " SOM OVERWRITER DET GAMLE CSS NÅR MAN HOVER. */
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -431,6 +432,7 @@ nav a:hover::after {
   width: 100%;
   max-height: 40vh;
   overflow: hidden;
+  padding: 0;
 }
 
 .herobilledeaabningstider img {
@@ -456,7 +458,7 @@ nav a:hover::after {
   display: flex;
   padding: var(--desktopSmallSpacer) 90px;
   gap: 40px;
-  background: #fdf6f0;
+  background: var(--pageBackground);
 }
 
 .column {
@@ -481,6 +483,7 @@ nav a:hover::after {
 
 .map {
   text-align: center;
+  padding: 0;
 }
 
 .map-container {
@@ -519,7 +522,7 @@ nav a:hover::after {
 /* Her styles Kontakt */
  .kontakt-section {
   padding: 2rem;
-  background-color: var(--lightGrey)
+  background-color: var(--pageBackground)
 }
 
 .kontakt-container {
@@ -632,7 +635,7 @@ h1, h2 {
 }
 
 .upcoming-events, .Tidligere-begivenheder {
-  background-color: var(--lightGrey);
+  background-color: var(--pageBackground);
 }
 
 .event-grid {
