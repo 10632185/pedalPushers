@@ -94,8 +94,10 @@ body {
     font-size: 20px;
   }
 
-  body{
+  html, body{
     background-color: var(--pageBackground);
+    overflow-x: auto;
+    width: 100%;
   }
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
@@ -109,9 +111,17 @@ nav {
   gap: var(--desktopSmallSpacer);
   background-color: var(--navBackground);
   position: sticky;
-  max-width: 100%;
+  width: 100%;
   top: 0;
   z-index: 3;
+}
+
+nav .hoverA.active {
+  border-bottom: 2px solid var(--lightBrown);
+}
+
+nav .hoverA.active:hover::after {
+  transform: translateX(-50%) scaleX(0);
 }
 
 nav a {
@@ -123,20 +133,20 @@ nav a {
   padding-bottom: 2px;           
 }
 
-nav a::after {
+nav .hoverA::after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
-  width: 100%;
+  width: 100vw;
   height: 2px;
   background-color: var(--lightBrown);
   transition: transform 0.2s ease;
 }
 
-nav a:hover::after {
+nav .hoverA:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
