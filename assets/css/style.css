@@ -435,6 +435,10 @@ nav .hoverA:hover::after {
     color: var(--pageBackground);
   }
  
+.forsideKnap:hover {
+  background-color: #8f2f14;
+}
+
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Åbningstider */
  .herobilledeaabningstider {
