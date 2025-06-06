@@ -534,7 +534,152 @@ position: absolute;
 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Bestil tid mekaniker */
- 
+ .heroSectionBookReparation {
+  position: relative;
+  padding: 0;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.heroSectionBookReparation img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.heroSectionBookReparation .overlayImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.heroSectionBookReparation h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--pageBackground);
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  padding-left: 2rem;
+}
+
+.booking-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff3e8;
+}
+
+.booking-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.booking-info {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.form-group {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.full-width {
+  flex: 1 1 100%;
+}
+
+input, select, textarea, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #000000;
+ padding-right:4rem ;
+}
+
+.info-field {
+  padding: 1rem;
+  font-size: 1.1rem;
+  width: 100%;       
+  height: 15vh;    
+  box-sizing: border-box;
+}
+
+
+textarea {
+  height: 30vh;
+  width: 26vw;
+  resize: vertical;
+}
+
+.date-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.date-buttons button {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #000000;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.date-buttons button:hover {
+  background-color: #ccc;
+}
+
+.confirm-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #b6401d;
+  color: white;
+  border: none;
+  padding: 0.75rem 3rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.vedhæft-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+  background-color: #b6401d;
+  color: white;
+  border: black 1px solid;
+  padding: 0.5rem 3rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.vedhæft-button img {
+  height: 1rem;
+  width: auto;
+}
+
+.confirm-button, .vedhæft-button:hover {
+  background-color: #8f2f14;
+}
+
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Bestil bord Cafe */
 .heroSectionBookBord {

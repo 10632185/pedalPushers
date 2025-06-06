@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedal Pushers | Book bord</title>
+    <title>Pedal Pushers | Book reparation</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/nanna.js" defer></script>
 <link rel="shortcut icon" href="./assets/img/pedalPushersLogo.png" type="image/x-icon">
@@ -13,23 +13,25 @@
 <nav>
     <a href="./begivenheder.html" class="hoverA">Begivenheder</a>
     <a href="./menukort.html" class="hoverA">Menukort</a>
-    <a href="./bookBord.html" class="active">Book bord</a>
+    <a href="./bookBord.html" class="hoverA">Book bord</a>
 <a href="./index.html">
 <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo"></a>
-    <a href="#" class="hoverA">Book reparation</a>
+    <a href="./bookReparation.html" class="active">Book reparation</a>
     <a href="#" class="hoverA">Køb cykler</a>
     <a href="./Aabningstider.html" class="hoverA">Åbningstider</a>
 </nav>   
 </header>
-<section class="heroSectionBookBord">
-    <h1>Book bord</h1>
-    <img src="./assets/img/bookBord.png" alt="">
+
+<section class="heroSectionBookReparation">
+    <h1>Book reparation</h1>
+    <img src="./assets/img/BookReparationpng.png" alt="">
     <div class="overlayImg"></div>
 </section>
   <section class="booking-section">
     <p class="booking-info">
       Caféen er kun åben lørdag og søndag og vi anbefaler, at du reserverer bord, da vi ofte har temaaftener og fuldt hus.
-    </p><form class="booking-form">
+    </p>
+    <form class="booking-form">
   <div class="form-left">
     <div class="form-group full-width">
       <label for="name"> <strong>Navn *</strong></label>
@@ -46,29 +48,19 @@
       <input type="tel" id="phone" required />
     </div>
 
-    <!-- Container for side-by-side fields -->
-    <div class="form-row">
-      <div class="form-group half-width">
-        <label for="people"><strong>Antal Personer *</strong></label>
-        <select id="people" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-      <div class="form-group half-width">
-        <label for="date"><strong>Vælg Dag *</strong></label>
-        <div class="date-buttons">
-          <button type="button">Lørdag</button>
-          <button type="button">Søndag</button>
-        </div>
-      </div>
+    <div class="form-group full-width">
+      <label for="informationfelt"><strong>Hvad skal vi kigge på?</strong></label>
+      <input type="text" id="informationfelt" class="info-field" required />
     </div>
-  </div>
+    
+<div class="form-group full-width">
+  <p>Vedhæft fil</p>
+   <button type="submit" class="vedhæft-button">
+  <img src="./assets/icons/paperclip-solid.svg" alt="">Vedhæft
+</button>
 
+  </div>
+    </div>
   <div class="form-right">
     <div class="form-group full-width">
       <label for="datetime"><strong>Dato- og tidsvælger *</strong></label>
@@ -80,8 +72,7 @@
     <button type="submit" class="confirm-button">Bekræft</button>
   </div>
 </form>
-
-  </section>
+</section>
 <footer class="footer">
   <div class="footer-column">
     <h3>Pedal pushers</h3>
