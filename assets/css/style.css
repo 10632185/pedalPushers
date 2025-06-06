@@ -140,7 +140,7 @@ nav .hoverA::after {
   bottom: 0;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
-  width: 100vw;
+  width: 100%;
   height: 2px;
   background-color: var(--lightBrown);
   transition: transform 0.2s ease;
@@ -540,7 +540,7 @@ position: absolute;
 .heroSectionBookBord {
   position: relative;
   padding: 0;
-  height: 50vh;
+  height: 40vh;
   overflow: hidden;
 }
 
@@ -730,8 +730,8 @@ textarea {
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Begivenheder */
 
-section {
-  padding: 2rem;
+.main-content {
+  padding: var(--desktopSmallSpacer);
 }
 
 h1, h2 {
@@ -742,33 +742,40 @@ h1, h2 {
 
 .event-hero {
   position: relative;
-  height: 50vh;
+  height: 40vh;
   width: 100%;
-  overflow: hidden;
+
 }
 
 .event-hero img {
+  position: relative; 
+  height: 40vh;     
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;   
+}
+
+.begivenhederDarkOverlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
-  object-fit: cover;
-  z-index: 1;
+  height: 40vh;   
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;    
 }
 
 .event-hero h1 {
   position: absolute;
-  padding-block: 0;
   bottom: 1rem;
   left: 90px;
-  z-index: 2;
+  z-index: 3;   
   color: var(--pageBackground);
   font-size: 64px;
   font-weight: bold;
   margin: 0;
+  padding-block: 0;
 }
-
 .begivenhederDarkOverlay{
   position: absolute;
   top: 0;
@@ -811,6 +818,7 @@ h1, h2 {
   font-weight: 600;
 }
 
+/* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles menukort */
 
 .menukortHeroContainer{
