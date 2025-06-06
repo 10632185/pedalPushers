@@ -453,15 +453,15 @@ nav .hoverA:hover::after {
 }
 
 .herobilledeaabningstider h1 {
-  margin: 0;
-  position: absolute;
+position: absolute;
   padding-block: 0;
   bottom: 1rem;
-  left: 6rem;
+  left: 90px;
+  z-index: 2;
   color: var(--pageBackground);
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: 64px;
   font-weight: bold;
-  z-index: 3;
+  margin: 0;
 }
 
 .aabningstiderDarkOverlay{
