@@ -1075,6 +1075,207 @@ h1, h2 {
 
 /* Forside */
 
+@media (max-width: 1024px) {
+  .video-container {
+    height: 50vh;
+  }
+
+  .video-container h1 {
+    font-size: 40px;
+    left: 2.5rem;
+    bottom: 2rem;
+    text-align: left;
+  }
+
+  .forsideIntroSection h3,
+  .forsideWafflesAndChaffles h3 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .forsideIntroSection p {
+    margin-bottom: 0.75rem;
+  }
+
+  .forsideContainer{
+    margin-inline: 1rem;
+  }
+
+  .forsideCTAWrapper {
+    flex-direction: row;
+    flex-wrap: wrap; 
+    padding: 1rem 2rem;
+
+  }
+
+  .forsideSide {
+    width: calc(50% - 1rem);
+    margin: 0;
+  }
+
+  .forsideImg {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 800px) {
+  .video-container {
+    height: 45vh;
+  }
+
+  .video-container h1 {
+    font-size: 36px;
+    left: 2rem;
+    bottom: 1.5rem;
+    text-align: left;
+  }
+
+  .forsideIntroSection h3,
+  .forsideWafflesAndChaffles h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .forsideIntroSection p {
+    margin-bottom: 0.5rem;
+  }
+
+  .forsideCTAWrapper {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0;
+  }
+
+  .forsideSide {
+    width: 100%;
+     margin: 0; 
+  }
+
+  .forsideImg {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    display: block;
+  }
+
+  .forsideText {
+    font-size: 1.8rem;
+  }
+
+  .forsideContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .forsideCard {
+    width: 100%;
+    max-width: 600px;
+    padding: 1.5rem;
+  }
+
+  .forsideIcon img {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .forsideCard h2 {
+    font-size: 1.75rem;
+  }
+
+  .forsideCard p {
+    font-size: 1.1rem;
+  }
+
+  .forsideKnap {
+    font-size: 1.1rem;
+    padding: 0.7rem;
+  }
+}
+
+
+@media (max-width: 425px) {
+  .video-container {
+    height: 35vh;
+  }
+
+  .video-container h1 {
+    font-size: 24px;
+    left: 1rem;
+    bottom: 1rem;
+    text-align: left;
+  }
+
+  .forsideIntroSection h3,
+  .forsideWafflesAndChaffles h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .forsideIntroSection p {
+    margin-bottom: 0;
+}
+
+  .forsideCTAWrapper {
+    flex-direction: column;
+    padding-inline: 1rem; 
+    gap: 0;
+  }
+
+  .forsideSide {
+    width: 100%;
+    margin: 0; 
+  }
+
+  .forsideImg {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    display: block;
+  }
+
+  .forsideText {
+    font-size: 1.3rem;
+  }
+  
+  .forsideContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .forsideCard {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .forsideIcon img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .forsideCard h2 {
+    font-size: 1.5rem;
+  }
+
+  .forsideCard p {
+    font-size: 1rem;
+  }
+
+  .forsideKnap {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+
 /* Åbningstider */
 
 /* Begivenheder */
