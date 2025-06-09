@@ -102,7 +102,7 @@ body {
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles HEADER */
- 
+/* NAVBAR DESKTOP */
 nav {
   display: flex;
   justify-content: center;
@@ -150,8 +150,113 @@ nav .hoverA:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
+/* ___________ */
+/* NAVBAR PHONE */
+#menu__toggle {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Navbar with logo */
+.mobile-logo-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--navBackground);
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  z-index: 1002;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Centered logo */
+.mobile-logo-centered img {
+  height: 45px; 
+}
+
+
+/* Burger button */
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1003;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -10px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 10px;
+}
+
+/* Burger animation */
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Slide-out menu */
+.menu__box {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100%;
+  padding: 80px 20px 20px;
+  background-color: var(--navBackground);
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.5);
+  list-style: none;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+#menu__toggle:checked ~ .menu__box {
+  right: 0;
+}
+
+/* Menu links */
+.menu__item {
+  display: block;
+  padding: 15px 10px;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 1px solid #080808;
+  transition: background 0.2s;
+}
  
-/* ____________________________________________________________________________________________________________________________________________________________________ */
+/* ________________________________________________________________________________________ *
 /* Her styles Footer */
  
 
@@ -1076,6 +1181,19 @@ h1, h2 {
 /* Forside */
 /* _____________________________________________________________________________ */
 @media (max-width: 1024px) {
+  nav {
+    gap: 1.5rem; /* reduce spacing between links */
+  }
+
+  nav a {
+    padding: 0.5rem; 
+    font-size: 1rem;
+  }
+
+  nav img {
+    height: 90px;
+  }
+
   .video-container {
     height: 50vh;
   }
@@ -1121,6 +1239,15 @@ h1, h2 {
 }
 
 @media (max-width: 800px) {
+   nav {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
+    background-color: var(--navBackground);
+  }
+
   .video-container {
     height: 45vh;
   }
@@ -1473,3 +1600,8 @@ textarea {
   }
 }
 
+@media (min-width: 801px) {
+  .mobile-header {
+    display: none;
+  }
+}
