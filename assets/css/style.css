@@ -766,7 +766,7 @@ input, select, textarea, button {
 
 textarea {
   height: 30vh;
-  width: 26vw;
+  width: 23vw;
   resize: vertical;
 }
 
@@ -1074,14 +1074,14 @@ h1, h2 {
 /* Her laves medie queries */
 
 /* Forside */
-
+/* _____________________________________________________________________________ */
 @media (max-width: 1024px) {
   .video-container {
     height: 50vh;
   }
 
   .video-container h1 {
-    font-size: 40px;
+    font-size: 46px;
     left: 2.5rem;
     bottom: 2rem;
     text-align: left;
@@ -1126,7 +1126,7 @@ h1, h2 {
   }
 
   .video-container h1 {
-    font-size: 36px;
+    font-size: 38px;
     left: 2rem;
     bottom: 1.5rem;
     text-align: left;
@@ -1204,7 +1204,7 @@ h1, h2 {
   }
 
   .video-container h1 {
-    font-size: 24px;
+    font-size: 32px;
     left: 1rem;
     bottom: 1rem;
     text-align: left;
@@ -1277,17 +1277,199 @@ h1, h2 {
 
 
 /* Åbningstider */
+/* _____________________________________________________________________________ */
 
 /* Begivenheder */
+/* _____________________________________________________________________________ */
 
 /* Kontakt */
+/* _____________________________________________________________________________ */
 
 /* Om os */
+/* _____________________________________________________________________________ */
 
 /* Book bord */
+/* _____________________________________________________________________________ */
+@media (max-width: 1024px) {
+textarea {
+    height: 30vh;
+    width: 42vw;
+    resize: vertical;
+}
+}
+
+@media (max-width: 800px) {
+  .booking-section {
+    max-width: 95%;
+  }
+
+  .form-group.full-width,
+  .form-group.half-width,
+  .form-left,
+  .form-right {
+    width: 100%;
+  }
+
+  .form-right textarea {
+    width: 100%;
+  }
+
+  .date-buttons {
+    flex-direction: column;
+  }
+
+  .confirm-button {
+    align-self: center;
+  }
+}
+
+
+@media (max-width: 425px) {
+  .booking-section {
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .booking-form {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .form-group,
+  .form-left,
+  .form-right,
+  .form-row,
+  .form-group.full-width {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .form-group label,
+  .form-group textarea,
+  .form-group input,
+  .form-group select {
+    text-align: left;
+    width: 100%;
+  }
+
+  .form-group textarea {
+    height: 20vh;
+  }
+
+  .date-buttons {
+    flex-direction: column;
+  }
+
+  .date-buttons button {
+    width: 100%;
+  }
+
+  .confirm-button {
+    align-self: center;
+    width: fit-content;
+    margin-top: 1rem;
+  }
+}
 
 /* Book reparation */
+/* _____________________________________________________________________________ */
+@media (max-width: 1024px) {
+  .booking-form {
+    gap: 3rem;
+  }
+
+  textarea {
+    width: 60vw;
+  }
+
+  .confirm-button {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 800px) {
+  .booking-form {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  textarea {
+    width: 80vw;
+  }
+
+  .confirm-button {
+    align-self: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .booking-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .form-left,
+  .form-right,
+  .form-group.full-width {
+    width: 100%;
+  }
+
+  textarea {
+    width: 90vw;
+  }
+
+  .confirm-button {
+    align-self: center;
+  }
+}
+
+/* .booking-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+} */
 
 /* Køb cykler */
+/* _____________________________________________________________________________ */
+
 
 /* Menukort */
+/* _____________________________________________________________________________ */
+@media (max-width: 1024px) {
+.menukortHeroContainer {
+    height: 50vh;
+  }
+  .menukortHeroTekst h1 {
+    font-size: 2.8rem;
+    left: 3rem;   
+  }
+}
+
+@media (max-width: 800px) {
+.menukortHeroContainer {
+    height: 45vh;
+  }
+  .menukortHeroTekst h1 {
+    font-size: 2.5rem;
+    left: 2rem;   
+  }
+}
+
+@media (max-width: 425px) {
+.menukortHeroContainer {
+    height: 30vh;
+}
+
+  .menukortHeroTekst h1 {
+    font-size: 32px;
+    left: 1rem;   
+  }
+}
+
