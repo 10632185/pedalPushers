@@ -494,8 +494,9 @@ nav .hoverA:hover::after {
    display: flex;
    justify-content: center;
    gap: var(--dekstopLargeSpacer);
-   margin-top: var(--dekstopLargeSpacer);
-   margin-bottom: var(--dekstopLargeSpacer);
+   margin: 0;
+   padding-top: var(--dekstopLargeSpacer);
+   padding-bottom: var(--dekstopLargeSpacer);
   }
   
   .forsideCard {
@@ -638,7 +639,9 @@ position: absolute;
 .addrese p {
   padding-block: var(--dekstopLargeSpacer);
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: bolder;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
 }
 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
@@ -1405,9 +1408,114 @@ h1, h2 {
 
 /* Åbningstider */
 /* _____________________________________________________________________________ */
+@media (max-width: 1024px) {
+.herobilledeaabningstider {
+    height: 50vh;
+  }
+  .herobilledeaabningstider h1 {
+    font-size: 2.8rem;
+    left: 3rem;   
+  }
+
+  .herobilledeaabningstider img {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 800px) {
+.herobilledeaabningstider {
+    height: 45vh;
+  }
+  .herobilledeaabningstider h1 {
+    font-size: 2.5rem;
+    left: 2rem;   
+  }
+
+  .herobilledeaabningstider img {
+    height: 45vh;
+  }
+  .content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .column{
+    max-width: 600px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+.herobilledeaabningstider {
+    height: 30vh;
+}
+
+  .herobilledeaabningstider h1 {
+    font-size: 32px;
+    left: 1rem;   
+  }
+  
+  .herobilledeaabningstider img{
+    height: 30vh;
+  }
+}
+
+@media (min-width: 801px) {
+  .mobile-header {
+    display: none;
+  }
+}
 
 /* Begivenheder */
 /* _____________________________________________________________________________ */
+
+@media (max-width: 1024px) {
+.event-hero {
+    height: 50vh;
+  }
+  .event-hero h1 {
+    font-size: 2.8rem;
+    left: 3rem;   
+  }
+
+  .event-hero img {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 800px) {
+.event-hero {
+    height: 45vh;
+  }
+  .event-hero h1 {
+    font-size: 2.5rem;
+    left: 2rem;   
+  }
+
+  .event-hero img {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 425px) {
+.event-hero {
+    height: 30vh;
+}
+
+  .event-hero h1 {
+    font-size: 32px;
+    left: 1rem;   
+  }
+  
+  .event-hero img{
+    height: 30vh;
+  }
+}
+
+@media (min-width: 801px) {
+  .mobile-header {
+    display: none;
+  }
+}
 
 /* Kontakt */
 /* _____________________________________________________________________________ */
@@ -1417,6 +1525,58 @@ h1, h2 {
 
 /* Book bord */
 /* _____________________________________________________________________________ */
+
+/* Hero */
+@media (max-width: 1024px) {
+.heroSectionBookBord {
+    height: 50vh;
+  }
+  .heroSectionBookBord h1 {
+    font-size: 2.8rem;
+    left: 3rem;   
+  }
+
+  .heroSectionBookBord img {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 800px) {
+.heroSectionBookBord {
+    height: 45vh;
+  }
+  .heroSectionBookBord h1 {
+    font-size: 2.5rem;
+    left: 2rem;   
+  }
+
+  .heroSectionBookBord img {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 425px) {
+.heroSectionBookBord {
+    height: 30vh;
+}
+
+  .heroSectionBookBord h1 {
+    font-size: 32px;
+    left: 1rem;   
+  }
+  
+  .heroSectionBookBord img{
+    height: 30vh;
+  }
+}
+
+@media (min-width: 801px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* Indhold */
 @media (max-width: 1024px) {
 textarea {
     height: 30vh;
@@ -1505,6 +1665,58 @@ textarea {
 
 /* Book reparation */
 /* _____________________________________________________________________________ */
+
+/* Herobillede */
+@media (max-width: 1024px) {
+.heroSectionBookReparation {
+    height: 50vh;
+  }
+  .heroSectionBookReparation h1 {
+    font-size: 2.8rem;
+    left: 3rem;   
+  }
+
+  .heroSectionBookReparation img {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 800px) {
+.heroSectionBookReparation {
+    height: 45vh;
+  }
+  .heroSectionBookReparation h1 {
+    font-size: 2.5rem;
+    left: 2rem;   
+  }
+
+  .heroSectionBookReparation img {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 425px) {
+.heroSectionBookReparation {
+    height: 30vh;
+}
+
+  .heroSectionBookReparation h1 {
+    font-size: 32px;
+    left: 1rem;   
+  }
+  
+  .heroSectionBookReparation img{
+    height: 30vh;
+  }
+}
+
+@media (min-width: 801px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* Indhold */
 @media (max-width: 1024px) {
   .booking-form {
     gap: 3rem;
