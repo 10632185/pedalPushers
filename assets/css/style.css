@@ -157,6 +157,7 @@ nav .hoverA:hover::after {
   position: absolute;
 }
 
+
 /* Navbar with logo */
 .mobile-logo-bar {
   position: fixed;
@@ -698,6 +699,7 @@ position: absolute;
 .booking-info {
   font-size: 1rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .booking-form {
@@ -937,6 +939,14 @@ textarea {
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: var(--desktopSmallSpacer);
+  padding-bottom: 1rem;
+}
+
+.kontaktSvgImg {
+  width: 100%;
+  max-width: 20px;
+  height: auto;
+  object-fit: cover;
 }
 
 
@@ -983,7 +993,89 @@ textarea {
 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Køb cykler */
- 
+ .heroSectionKøbCykler {
+  position: relative;
+  padding: 0;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.heroSectionKøbCykler img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.heroSectionKøbCykler .overlayImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.heroSectionKøbCykler h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--pageBackground);
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  padding-left: 2rem;
+}
+
+ .filters {
+  background-color: var(--cardBackground);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+    .filters label {
+      margin-right: 1rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .filters input[type="checkbox"] {
+      margin-right: 0.3rem;
+      cursor: pointer;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .bike-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .bike-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .info {
+      padding: 1rem;
+    }
+    .info h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+    .price {
+      font-weight: bold;
+      color: #0c7d0c;
+      margin-top: 0.5rem;
+    }
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Begivenheder */
 
@@ -1001,7 +1093,6 @@ h1, h2 {
   position: relative;
   height: 40vh;
   width: 100%;
-
 }
 
 .event-hero img {
@@ -1033,18 +1124,10 @@ h1, h2 {
   margin: 0;
   padding-block: 0;
 }
-.begivenhederDarkOverlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
 
 .upcoming-events, .Tidligere-begivenheder {
   background-color: var(--pageBackground);
+  padding-bottom: var(--desktopMediumSpacer);
 }
 
 .event-grid {
@@ -1300,6 +1383,7 @@ h1, h2 {
     gap: 1.5rem;
     padding: 0 1.5rem;
     box-sizing: border-box;
+    padding-bottom: var(--mobileLargeSpacer);
   }
 
   .forsideCard {
@@ -1325,8 +1409,118 @@ h1, h2 {
     font-size: 1.1rem;
     padding: 0.7rem;
   }
-}
 
+  nav {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
+    background-color: var(--navBackground);
+  }
+
+  .mobile-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background-color: var(--navBackground);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1002;
+  }
+  
+  .mobile-logo-centered {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1002;
+  }
+
+  .mobile-logo-centered img {
+    height: 45px;
+  }
+
+  #menu__toggle {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .menu__btn {
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1003;
+    padding-top: 0.8rem;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: var(--lightBrown);
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+
+  .menu__btn > span::before {
+    content: "";
+    top: -10px;
+  }
+
+  .menu__btn > span::after {
+    content: "";
+    top: 10px;
+  }
+
+
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  /* Slide-out menu from right */
+  .menu__box {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100%;
+    padding: 80px 20px 20px;
+    background-color: var(--navBackground);
+    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.5);
+    list-style: none;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  #menu__toggle:checked ~ .menu__box {
+    right: 0;
+  }
+
+  /* Menu links */
+  .menu__item {
+    display: block;
+    padding: 15px 10px;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 1px solid #080808;
+    transition: background 0.2s;
+  }
+}
 
 @media (max-width: 425px) {
   .video-container {
@@ -1378,6 +1572,7 @@ h1, h2 {
     gap: 1rem;
     padding: 0 1rem;
     box-sizing: border-box;
+    padding-bottom: var(--mobileLargeSpacer);
   }
 
   .forsideCard {
@@ -1457,6 +1652,16 @@ h1, h2 {
   .herobilledeaabningstider img{
     height: 30vh;
   }
+
+    .column h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .column h3 {
+    font-size: 1.5em;
+  }
 }
 
 @media (min-width: 801px) {
@@ -1467,61 +1672,185 @@ h1, h2 {
 
 /* Begivenheder */
 /* _____________________________________________________________________________ */
-
+/* --- max-width: 1024px --- */
 @media (max-width: 1024px) {
-.event-hero {
+  .event-hero {
     height: 50vh;
   }
+
+  .event-hero img {
+    height: 50vh;
+  }
+
+  .begivenhederDarkOverlay {
+    height: 50vh;
+  }
+
   .event-hero h1 {
     font-size: 2.8rem;
-    left: 3rem;   
-  }
-
-  .event-hero img {
-    height: 50vh;
+    left: 3rem;
   }
 }
 
+/* --- max-width: 800px --- */
 @media (max-width: 800px) {
-.event-hero {
+  .event-hero {
     height: 45vh;
   }
+
+  .event-hero img {
+    height: 45vh;
+  }
+
+  .begivenhederDarkOverlay {
+    height: 45vh;
+  }
+
   .event-hero h1 {
     font-size: 2.5rem;
-    left: 2rem;   
+    left: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .event-card {
+    width: 16rem;
+  }
+}
+
+/* --- max-width: 425px --- */
+@media (max-width: 425px) {
+  .event-hero {
+    height: 30vh;
   }
 
   .event-hero img {
-    height: 45vh;
-  }
-}
-
-@media (max-width: 425px) {
-.event-hero {
     height: 30vh;
-}
+  }
+
+  .begivenhederDarkOverlay {
+    height: 30vh;
+  }
 
   .event-hero h1 {
-    font-size: 32px;
-    left: 1rem;   
+    font-size: 2rem;
+    left: 1rem;
+    bottom: 0.5rem;
   }
-  
-  .event-hero img{
-    height: 30vh;
+
+  h1, h2 {
+    font-size: 1.7rem;
+    padding-bottom: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .event-card {
+    width: 14rem;
+  }
+
+  .event-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    font-size: 1rem;
   }
 }
 
+/* Hide mobile menu on larger screens */
 @media (min-width: 801px) {
   .mobile-header {
     display: none;
   }
 }
-
 /* Kontakt */
 /* _____________________________________________________________________________ */
+@media (max-width: 800px) {
+  .kontakt-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 1.5rem;
+  }
+
+  .kontakt-info h1 {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+
+  .kontakt-container p,
+  .p-information-brødtekst {
+    font-size: 1rem;
+  }
+
+  .kontakt-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .kontakt-section {
+    padding: 1.5rem;
+    padding-bottom: var(--mobileLargeSpacer);
+  }
+}
+
+@media (max-width: 425px) {
+  .kontakt-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .kontakt-container p,
+  .p-information-brødtekst {
+    font-size: 0.95rem;
+  }
+
+  .kontakt-section {
+    padding: 1rem;
+  }
+}
+
+
 
 /* Om os */
 /* _____________________________________________________________________________ */
+@media (max-width: 800px) {
+  .omOsTitel{
+    text-align: left;
+    margin-inline:var(--mobileLargeSpacer) ;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .omOs-section {
+    flex-direction: column;
+    align-items: center;
+    margin-inline: var(--desktopSmallSpacer);
+    text-align: left;
+    padding-bottom: var(--mobileLargeSpacer);
+  }
+
+  .omOs {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+
+  .omOs-section img {
+    order: 2;
+    max-width: 100%;
+    max-height: 20vh;
+    width: 100%;
+    object-position: center;
+    margin-bottom: var(--mobileSpacer);
+  }
+
+  .omOs p {
+    max-width: 100%;
+  }
+}
+
 
 /* Book bord */
 /* _____________________________________________________________________________ */

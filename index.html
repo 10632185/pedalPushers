@@ -5,29 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedal Pushers | Forside</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/nanna.js" defer></script>
+    <script src="./assets/js/app.js" defer></script>
 <link rel="shortcut icon" href="./assets/img/pedalPushersLogo.png" type="image/x-icon">
 </head>
 <body>
 <header>
-<!-- Taget inspiration fra denne Codepen: https://codepen.io/alvarotrigo/pen/yLzaPVJ derfra er den blevet justeret og rettet til vores behov.-->
+  <!-- Taget inspiration fra denne Codepen: https://codepen.io/alvarotrigo/pen/yLzaPVJ derfra er den blevet justeret og rettet til vores behov.-->
 <div class="mobile-header">
-  <a href="./index.html" class="mobile-logo-centered">
-    <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo" />
-  </a>
-  <input id="menu__toggle" type="checkbox" />
-  <label class="menu__btn" for="menu__toggle">
-    <span></span>
-  </label>
+  <div class="mobile-navbar">
+    <a href="./index.html" class="mobile-logo-centered">
+      <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo" />
+    </a>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
   <ul class="menu__box">
     <li><a class="menu__item" href="./begivenheder.html">Begivenheder</a></li>
     <li><a class="menu__item" href="./menukort.html">Menukort</a></li>
     <li><a class="menu__item" href="./bookBord.html">Book bord</a></li>
     <li><a class="menu__item" href="./bookReparation.html">Book reparation</a></li>
-    <li><a class="menu__item" href="#">Køb cykler</a></li>
+    <li><a class="menu__item" href="./koebCykler.html">Køb cykler</a></li>
     <li><a class="menu__item" href="./Aabningstider.html">Åbningstider</a></li>
   </ul>
 </div>
+  </div>
 <!-- Codepen ___________________________________________________________________ -->
 <nav>
     <a href="./begivenheder.html" class="hoverA">Begivenheder</a>
@@ -36,14 +38,17 @@
 <a href="./index.html">
 <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo"></a>
      <a href="./bookReparation.html" class="hoverA">Book reparation</a>
-    <a href="#" class="hoverA">Køb cykler</a>
+    <a href="./koebCykler.html" class="hoverA">Køb cykler</a>
     <a href="./Aabningstider.html" class="hoverA">Åbningstider</a>
 </nav>   
 <div class="video-container">
+  <!-- Fallback img til browsers der ikke understøtter eller indlæser video/mp4 filen korrekt, derfor er der bliver sat en div med et class som hedder "video-overlay" hvor i CSS bliver sat et IMG. -->
+  <picture class="video-fallback">
+    <img src="./assets/img/pedalPushersHeroImgFallback.png" alt="FallbackImagePedalPushers" />
+  </picture>
   <video autoplay loop muted playsinline>
-    <source src="./assets/vid/Sequence 01_2.mp4" type="video/mp4" />
+    <source src="./assets/vid/Sequene 01_2.mp4" type="video/mp4" />
   </video>
-  <div class="video-overlay"></div>
   <h1>Velkommen til<br>Pedal Pushers</h1>
 </div>
 </header>
