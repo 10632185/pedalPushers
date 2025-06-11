@@ -699,6 +699,7 @@ position: absolute;
 .booking-info {
   font-size: 1rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .booking-form {
