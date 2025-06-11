@@ -10,15 +10,17 @@
 </head>
 <body>
 <header>
-<!-- Taget inspiration fra denne Codepen: https://codepen.io/alvarotrigo/pen/yLzaPVJ derfra er den blevet justeret og rettet til vores behov.-->
+  <!-- Taget inspiration fra denne Codepen: https://codepen.io/alvarotrigo/pen/yLzaPVJ derfra er den blevet justeret og rettet til vores behov.-->
 <div class="mobile-header">
-  <a href="./index.html" class="mobile-logo-centered">
-    <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo" />
-  </a>
-  <input id="menu__toggle" type="checkbox" />
-  <label class="menu__btn" for="menu__toggle">
-    <span></span>
-  </label>
+  <div class="mobile-navbar">
+    <a href="./index.html" class="mobile-logo-centered">
+      <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo" />
+    </a>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
   <ul class="menu__box">
     <li><a class="menu__item" href="./begivenheder.html">Begivenheder</a></li>
     <li><a class="menu__item" href="./menukort.html">Menukort</a></li>
@@ -28,6 +30,7 @@
     <li><a class="menu__item" href="./Aabningstider.html">Åbningstider</a></li>
   </ul>
 </div>
+  </div>
 <!-- Codepen ___________________________________________________________________ -->
 <nav>
     <a href="./begivenheder.html" class="hoverA">Begivenheder</a>
@@ -40,10 +43,13 @@
     <a href="./Aabningstider.html" class="hoverA">Åbningstider</a>
 </nav>   
 <div class="video-container">
+  <!-- Fallback img til browsers der ikke understøtter eller indlæser video/mp4 filen korrekt, derfor er der bliver sat en div med et class som hedder "video-overlay" hvor i CSS bliver sat et IMG. -->
+  <picture class="video-fallback">
+    <img src="./assets/img/1250526.jpg" alt="Fallback image" />
+  </picture>
   <video autoplay loop muted playsinline>
     <source src="./assets/vid/Sequence 01_2.mp4" type="video/mp4" />
   </video>
-  <div class="video-overlay"></div>
   <h1>Velkommen til<br>Pedal Pushers</h1>
 </div>
 </header>

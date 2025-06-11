@@ -12,13 +12,15 @@
 <header>
   <!-- Taget inspiration fra denne Codepen: https://codepen.io/alvarotrigo/pen/yLzaPVJ derfra er den blevet justeret og rettet til vores behov.-->
 <div class="mobile-header">
-  <a href="./index.html" class="mobile-logo-centered">
-    <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo" />
-  </a>
-  <input id="menu__toggle" type="checkbox" />
-  <label class="menu__btn" for="menu__toggle">
-    <span></span>
-  </label>
+  <div class="mobile-navbar">
+    <a href="./index.html" class="mobile-logo-centered">
+      <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo" />
+    </a>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
   <ul class="menu__box">
     <li><a class="menu__item" href="./begivenheder.html">Begivenheder</a></li>
     <li><a class="menu__item" href="./menukort.html">Menukort</a></li>
@@ -28,13 +30,13 @@
     <li><a class="menu__item" href="./Aabningstider.html">Åbningstider</a></li>
   </ul>
 </div>
+  </div>
 <!-- Codepen ___________________________________________________________________ -->
 <nav>
     <a href="./begivenheder.html" class="hoverA">Begivenheder</a>
     <a href="./menukort.html" class="hoverA">Menukort</a>
     <a href="./bookBord.html" class="hoverA">Book bord</a>
-<a href="./index.html">
-<img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo"></a>
+    <a href="./index.html"> <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo"></a>
     <a href="./bookReparation.html" class="hoverA">Book reparation</a>
     <a href="#" class="hoverA">Køb cykler</a>
     <a href="./Aabningstider.html" class="hoverA">Åbningstider</a>
@@ -44,16 +46,25 @@
   <div class="kontakt-container">
     <div class="kontakt-info">
       <h1>Kontakt Os</h1>
-      <p class="p-information-brødtekst">Har du spørgsmål om reparationer, caféen, åbningstider eller noget helt fjerde? Så tøv ikke med at kontakte os vi er altid klar til at hjælpe!</p>
-<p><strong>Navn:</strong> Kristian Ramdhanie</p>
-<p><strong>Email:</strong> entourtobago@live.com</p>
-<p><strong>Tlf.nr:</strong> 52 11 19 07</p>
+      <div class="p-information-brødtekst">
+      <p>Har du spørgsmål om reparationer, caféen, åbningstider eller noget helt fjerde? Så tøv ikke med at kontakte os vi er altid klar til at hjælpe dig!</p>
+      <p>Uanset om du står med en cykel, der driller, gerne vil vide, hvad dagens menu i caféen byder på, eller bare er nysgerrig efter, hvilke services vi tilbyder, så er vi kun et opkald, en mail eller en besked væk.</p>
+      <p>Vi tager os tid til at lytte, og vi bestræber os på at give dig et hurtigt og præcist svar – så du ikke skal gå og vente.</p>
+      <p>Måske vil du booke en tid til reparation, høre mere om vores arrangementer, eller bare kigge forbi og få en snak over en god kop kaffe. Uanset hvad dit behov er, er du mere end velkommen til at række ud vi glæder os til at høre fra dig!</p>
+    </div>
+ <div class="kontakt-info">
+<p><img class="kontaktSvgImg" src="./assets/icons/user-solid.svg" alt=""><strong>Navn:</strong> Kristian Ramdhanie</p>
+<p><img class="kontaktSvgImg" src="./assets/icons/envelope-solid (1).svg" alt=""><strong>Email:</strong> entourtobago@live.com</p>
+<p><img class="kontaktSvgImg" src="./assets/icons/phone-solid.svg" alt=""><strong>Tlf.nr:</strong> 52 11 19 07</p>
+<!-- https://fontawesome.com/icons/phone?f=classic&s=solid -->
+<p><img class="kontaktSvgImg" src="./assets/icons/location-dot-solid (1).svg" alt=""><strong>Adresse:</strong> Østerbro 12, 9000 Aalborg</p>
     </div>
     <div class="kontakt-image">
       <img src="./assets/img/MrPedalPusher.png" alt="BilledAfMrPedalPushers" />
+      <!-- https://www.facebook.com/photo.php?fbid=675500707934683&set=pb.100064242780156.-2207520000&type=3 -->
     </div>
   </div>
-
+  </div>
 </section>
 <footer class="footer">
   <div class="footer-column">
