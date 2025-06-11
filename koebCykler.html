@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedal Pushers | Book bord</title>
+    <title>Pedal Pushers | Køb Cykler</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/app.js" defer></script>
+    <script src="./assets/js/content.js" defer></script>
 <link rel="shortcut icon" href="./assets/img/pedalPushersLogo.png" type="image/x-icon">
 </head>
 <body>
 <header>
   <!-- Taget inspiration fra denne Codepen: https://codepen.io/alvarotrigo/pen/yLzaPVJ derfra er den blevet justeret og rettet til vores behov.-->
 <div class="mobile-header">
-  <div class="mobile-navbar">
-    <a href="./index.html" class="mobile-logo-centered">
-      <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo" />
-    </a>
-    <input id="menu__toggle" type="checkbox" />
-    <label class="menu__btn" for="menu__toggle">
-      <span></span>
-    </label>
-
+  <a href="./index.html" class="mobile-logo-centered">
+    <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo" />
+  </a>
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
   <ul class="menu__box">
     <li><a class="menu__item" href="./begivenheder.html">Begivenheder</a></li>
     <li><a class="menu__item" href="./menukort.html">Menukort</a></li>
@@ -30,78 +29,31 @@
     <li><a class="menu__item" href="./Aabningstider.html">Åbningstider</a></li>
   </ul>
 </div>
-  </div>
 <!-- Codepen ___________________________________________________________________ -->
 <nav>
     <a href="./begivenheder.html" class="hoverA">Begivenheder</a>
     <a href="./menukort.html" class="hoverA">Menukort</a>
-    <a href="./bookBord.html" class="hoverA active">Book bord</a>
+    <a href="./bookBord.html" class="hoverA">Book bord</a>
 <a href="./index.html">
 <img src="./assets/img/pedalPushersLogo.png" alt="Pedal Pushers Logo"></a>
     <a href="./bookReparation.html" class="hoverA">Book reparation</a>
-    <a href="#" class="hoverA">Køb cykler</a>
+    <a href="./koebCykler.html" class="hoverA active">Køb cykler</a>
     <a href="./Aabningstider.html" class="hoverA">Åbningstider</a>
-</nav>   
+</nav>
 </header>
-<section class="heroSectionBookBord">
-    <h1>Book bord</h1>
-    <img src="./assets/img/bookBord.png" alt="">
+<section class="heroSectionKøbCykler">
+    <h1>Køb Cykler</h1>
+    <img src="./assets/img/koebCyklerHero.png" alt="køb cykler hero billede">
     <div class="overlayImg"></div>
 </section>
-  <section class="booking-section">
-    <p class="booking-info">
-      Caféen er kun åben lørdag og søndag og vi anbefaler, at du reserverer bord, da vi ofte har temaaftener og fuldt hus.
-    </p>
-<form class="booking-form">
-  <div class="form-left">
-    <div class="form-group full-width">
-      <label for="name"> <strong>Navn *</strong></label>
-      <input type="text" id="name" required />
-    </div>
 
-    <div class="form-group full-width">
-      <label for="email"><strong>Email *</strong></label>
-      <input type="email" id="email" required />
-    </div>
-
-    <div class="form-group full-width">
-      <label for="phone"><strong>Telefon *</strong></label>
-      <input type="tel" id="phone" required />
-    </div>
-    <div class="form-row">
-      <div class="form-group half-width">
-        <label for="people"><strong>Antal Personer *</strong></label>
-        <select id="people" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-      <div class="form-group half-width">
-        <label for="date"><strong>Vælg Dag *</strong></label>
-        <div class="date-buttons">
-          <button type="button">Lørdag</button>
-          <button type="button">Søndag</button>
-        </div>
-      </div>
-    </div>
+<!-- START -->
+  <div class="filters">
+    <strong>Filtrer efter kategori:</strong><br/>
   </div>
+  <section class="grid-container"></section>
+<!-- SLUT -->
 
-  <div class="form-right">
-    <div class="form-group full-width">
-      <label for="datetime"><strong>Dato- og tidsvælger *</strong></label>
-      <textarea id="datetime" required></textarea>
-    </div>
-  </div>
-
-  <div class="form-group full-width">
-    <button type="submit" class="confirm-button">Bekræft</button>
-  </div>
-</form>
-</section>
 <footer class="footer">
   <div class="footer-column">
     <h3>Pedal pushers</h3>
