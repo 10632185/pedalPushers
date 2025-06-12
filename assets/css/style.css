@@ -308,7 +308,6 @@ nav .hoverA:hover::after {
 
 .footer-column ul li a::after {
   content: ""; 
-  /* SPØRG DAN OM DETTE -- CONTENT "" -- MÅ BRUGES? DET INDSÆTTER/GENERERE NYT CSS INDE I " " SOM OVERWRITER DET GAMLE CSS NÅR MAN HOVER. */
   position: absolute;
   left: 50%;
   bottom: 0;
