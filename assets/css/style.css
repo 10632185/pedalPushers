@@ -151,13 +151,12 @@ nav .hoverA:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* ___________ */
+/* ________________________________________________________________*/
 /* NAVBAR PHONE */
 #menu__toggle {
   opacity: 0;
   position: absolute;
 }
-
 
 /* Navbar with logo */
 .mobile-logo-bar {
@@ -430,8 +429,6 @@ nav .hoverA:hover::after {
 
 .forsideImg {
   width: 100%;
-  /* height: 80vh; */
-  /* den normale height var 80 vh, men vi kan lege lidt med det og så se hvad vi bliver enige om i gruppen :) */
   height: 70vh;
   object-fit: cover;
   display: block;
@@ -600,11 +597,12 @@ position: absolute;
 .column h2 {
   margin-bottom: var(--desktopSmallSpacer);
   font-weight: normal;
-  font-size: 3em;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .column h3 {
-  font-size: 2em;
+  font-size: 1.5rem;
   padding-bottom: 1.6rem;
   font-weight: lighter;
 }
@@ -642,8 +640,7 @@ position: absolute;
   padding-block: var(--dekstopLargeSpacer);
   font-size: 2rem;
   font-weight: bolder;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-style: italic;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
@@ -841,44 +838,27 @@ textarea {
   background-color: #fff3e8;
 }
 
+.booking-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.booking-form,
+.kalenderBookTider {
+  flex: 1;
+  min-width: 300px;
+}
+
+.kalenderBookTider img {
+  max-width: 100%;
+  height: auto;
+  padding-top: 1rem;
+}
+
 .booking-section h1 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
-}
-
-.booking-info {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-.booking-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-}
-
-.form-group {
-  flex: 1 1 200px;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 1rem;
-}
-
-.full-width {
-  flex: 1 1 100%;
-}
-
-input, select, textarea, button {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #000000;
- padding-right:4rem ;
-}
-
-textarea {
-  height: 30vh;
-  width: 23vw;
-  resize: vertical;
 }
 
 .date-buttons {
@@ -1044,39 +1024,53 @@ textarea {
       cursor: pointer;
       user-select: none;
     }
+
     .filters input[type="checkbox"] {
       margin-right: 0.3rem;
       cursor: pointer;
     }
+
     .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 2rem;
-      padding: 2rem;
+     margin: var(--dekstopLargeSpacer);
     }
+
     .bike-card {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 25rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
     .bike-card img {
       width: 100%;
       height: auto;
       display: block;
     }
-    .info {
-      padding: 1rem;
-    }
-    .info h3 {
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+
+  .info h3 {
       margin-top: 0;
       font-size: 1.2rem;
     }
-    .price {
-      font-weight: bold;
-      color: #0c7d0c;
-      margin-top: 0.5rem;
-    }
+
+ .price {
+  font-weight: bold;
+  color: #0c7d0c;
+  margin-top: auto;
+}
+
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Begivenheder */
 
@@ -1136,13 +1130,11 @@ h1, h2 {
   gap: 2rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
-  scroll-snap-type: x mandatory;
 }
 
 .event-card {
   flex: 0 0 auto;
   width: 20rem;
-  scroll-snap-align: start;
 }
 
 .event-card img {
@@ -1269,7 +1261,7 @@ h1, h2 {
 /* _____________________________________________________________________________ */
 @media (max-width: 1024px) {
   nav {
-    gap: 1.5rem; /* reduce spacing between links */
+    gap: 1.5rem;
   }
 
   nav a {

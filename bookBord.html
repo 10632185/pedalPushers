@@ -49,54 +49,47 @@
     <div class="overlayImg"></div>
 </section>
   <section class="booking-section">
-    <p class="booking-info">
-      Caféen er kun åben lørdag og søndag og vi anbefaler, at du reserverer bord, da vi ofte har temaaftener og fuldt hus.
-    </p>
-<form class="booking-form">
-  <div class="form-left">
-    <div class="form-group full-width">
-      <label for="name"> <strong>Navn *</strong></label>
-      <input type="text" id="name" required />
-    </div>
+  <p class="booking-info">
+    Caféen er kun åben lørdag og søndag og vi anbefaler, at du reserverer bord, da vi ofte har temaaftener og fuldt hus.
+  </p>
 
-    <div class="form-group full-width">
-      <label for="email"><strong>Email *</strong></label>
-      <input type="email" id="email" required />
-    </div>
+  <!-- Wrap both sides in a container -->
+  <div class="booking-content">
+    <form class="booking-form">
+      <!-- form-left already exists -->
+      <div class="form-left">
+        <div class="form-group full-width">
+          <label for="name"><strong>Navn *</strong></label>
+          <input type="text" id="name" required />
+        </div>
 
-    <div class="form-group full-width">
-      <label for="phone"><strong>Telefon *</strong></label>
-      <input type="tel" id="phone" required />
-    </div>
-    <div class="form-row">
-      <div class="form-group half-width">
-        <label for="people"><strong>Antal Personer *</strong></label>
-        <select id="people" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
+        <div class="form-group full-width">
+          <label for="email"><strong>Email *</strong></label>
+          <input type="email" id="email" required />
+        </div>
 
-      <div class="form-group half-width">
-        <label for="date"><strong>Vælg Dag *</strong></label>
-        <div class="date-buttons">
-          <button type="button">Lørdag</button>
-          <button type="button">Søndag</button>
+        <div class="form-group full-width">
+          <label for="phone"><strong>Telefon *</strong></label>
+          <input type="tel" id="phone" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="people"><strong>Antal Personer *</strong></label>
+            <select id="people" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
         </div>
       </div>
+    </form>
+    <div class="kalenderBookTider">
+      <img src="./assets/img/kalenderBookTider.png" alt="Kalender" />
     </div>
-  </div>
-
-  <div class="form-right">
-    <div class="form-group full-width">
-      <label for="datetime"><strong>Dato- og tidsvælger *</strong></label>
-      <textarea id="datetime" required></textarea>
-    </div>
-  </div>
-
   <div class="form-group full-width">
     <button type="submit" class="confirm-button">Bekræft</button>
   </div>
