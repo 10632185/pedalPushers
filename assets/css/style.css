@@ -1,12 +1,3 @@
-* {
-    box-sizing: border-box;
-}
- 
-body {
-    margin: 0;
-    background-color: var(--lightGrey);
-}
- 
 /* TYPOGRAPHY */
 /* ___________________________________ */
 /* Brødtekst */
@@ -95,6 +86,7 @@ body {
     background-color: var(--pageBackground);
     /* overflow-x: auto; */
     width: 100%;
+    margin: 0;
   }
  
 /* ____________________________________________________________________________________________________________________________________________________________________ */
@@ -678,7 +670,6 @@ position: absolute;
   z-index: 2;
   margin: 0;
   padding: 0;
-  padding-left: 2rem;
 }
 
 .booking-section {
@@ -1260,12 +1251,11 @@ h1, h2 {
 
 /*____________________________________________________________________________________________________________________________________________________________________ */
 /* Her laves medie queries */
-
 /* Forside */
 /* _____________________________________________________________________________ */
 @media (max-width: 1024px) {
   nav {
-    gap: 1.5rem;
+    gap: 1.5rem; /* reduce spacing between links */
   }
 
   nav a {
@@ -1519,7 +1509,7 @@ h1, h2 {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .video-container {
     height: 35vh;
   }
@@ -1597,7 +1587,6 @@ h1, h2 {
   }
 }
 
-
 /* Åbningstider */
 /* _____________________________________________________________________________ */
 @media (max-width: 1024px) {
@@ -1636,7 +1625,7 @@ h1, h2 {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
 .herobilledeaabningstider {
     height: 30vh;
 }
@@ -1717,8 +1706,8 @@ h1, h2 {
   }
 }
 
-/* --- max-width: 425px --- */
-@media (max-width: 425px) {
+/* --- max-width: 430px --- */
+@media (max-width: 430px) {
   .event-hero {
     height: 30vh;
   }
@@ -1764,6 +1753,32 @@ h1, h2 {
 }
 /* Kontakt */
 /* _____________________________________________________________________________ */
+@media (max-width: 1024px) {
+  .kontakt-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .kontakt-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .kontakt-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .kontakt-section {
+    padding: 2rem;
+    padding-bottom: var(--mobileLargeSpacer);
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 800px) {
   .kontakt-container {
     flex-direction: column;
@@ -1812,7 +1827,7 @@ margin: 0;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .kontakt-container {
     flex-direction: column;
     gap: 1.5rem;
@@ -1833,6 +1848,11 @@ margin: 0;
     font-size: 0.95rem;
     gap: 0.5rem;
   }
+
+  .kontakt-section h1 {
+       margin: 0;
+       padding-top: 0;
+    }
 
   .kontaktSvgImg {
     width: 18px;
@@ -1915,7 +1935,7 @@ margin: 0;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
 .heroSectionBookBord {
     height: 30vh;
 }
@@ -1971,7 +1991,7 @@ textarea {
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .booking-section {
     margin: 0 auto;
     padding: 1rem;
@@ -2055,7 +2075,7 @@ textarea {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
 .heroSectionBookReparation {
     height: 30vh;
 }
@@ -2106,7 +2126,7 @@ textarea {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .booking-form {
     flex-direction: column;
     align-items: center;
@@ -2137,6 +2157,72 @@ textarea {
 
 /* Køb cykler */
 /* _____________________________________________________________________________ */
+@media (max-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-inline: var(--mobileMediumSpacer);
+}
+
+.heroSectionKøbCykler h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 3rem;
+    color: var(--pageBackground);
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.heroSectionKøbCykler {
+    position: relative;
+    padding: 0;
+    height: 30vh;
+    overflow: hidden;
+}
+}
+
+@media (max-width: 430px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-inline: var(--mobileMediumSpacer);
+}
+
+.heroSectionKøbCykler h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: var(--pageBackground);
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.heroSectionKøbCykler {
+    position: relative;
+    padding: 0;
+    height: 30vh;
+    overflow: hidden;
+}
+}
+
+@media (max-width: 430px) {
+  .filters {
+    padding: 1rem;
+    margin: 1rem;
+    text-align: left;
+  }
+
+  .filters label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
 
 
 /* Menukort */
@@ -2161,7 +2247,7 @@ textarea {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
 .menukortHeroContainer {
     height: 30vh;
 }
