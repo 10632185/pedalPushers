@@ -4,7 +4,7 @@
  
 body {
     margin: 0;
-    background-color: var(--lightGrey)
+    background-color: var(--lightGrey);
 }
  
 /* TYPOGRAPHY */
@@ -308,7 +308,6 @@ nav .hoverA:hover::after {
 
 .footer-column ul li a::after {
   content: ""; 
-  /* SPØRG DAN OM DETTE -- CONTENT "" -- MÅ BRUGES? DET INDSÆTTER/GENERERE NYT CSS INDE I " " SOM OVERWRITER DET GAMLE CSS NÅR MAN HOVER. */
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -895,39 +894,44 @@ textarea {
 
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Kontakt */
- .kontakt-section {
-  padding: 2rem;
-  background-color: var(--pageBackground)
+.kontakt-section{
+  margin: var(--dekstopLargeSpacer);
 }
 
 .kontakt-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-
-.kontakt-info h1{
-  text-align: left;
+.kontakt-left {
+  flex: 1 1 300px;
+  max-width: 400px;
 }
 
-.kontakt-container p {
-  font-size: 1.2rem;
+.kontakt-right {
+  flex: 2 1 500px;
 }
 
-.p-information-brødtekst {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: var(--desktopSmallSpacer);
-  padding-bottom: 1rem;
+.kontakt-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.kontakt-details p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .kontaktSvgImg {
-  width: 100%;
-  max-width: 20px;
-  height: auto;
-  object-fit: cover;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 
@@ -1772,6 +1776,7 @@ h1, h2 {
     text-align: left;
     font-size: 1.8rem;
     margin-bottom: 0;
+    padding: 0;
   }
 
   .kontakt-container p,
@@ -1788,10 +1793,11 @@ h1, h2 {
   .kontakt-section {
     padding: 1.5rem;
     padding-bottom: var(--mobileLargeSpacer);
+    margin-top: 0;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .kontakt-info h1 {
     font-size: 1.5rem;
   }
@@ -1802,10 +1808,41 @@ h1, h2 {
   }
 
   .kontakt-section {
-    padding: 1rem;
+margin: 0;
   }
 }
 
+@media (max-width: 425px) {
+  .kontakt-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .kontakt-left,
+  .kontakt-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .kontakt-section {
+    margin: var(--mobileSpacer, 1rem);
+  }
+
+  .kontakt-details p {
+    font-size: 0.95rem;
+    gap: 0.5rem;
+  }
+
+  .kontaktSvgImg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .kontakt-image img {
+    margin-bottom: 0.75rem;
+  }
+}
 
 
 /* Om os */
@@ -1835,7 +1872,8 @@ h1, h2 {
     max-width: 100%;
     max-height: 20vh;
     width: 100%;
-    object-position: center;
+    object-fit: cover;
+    object-position: 0% 30%;
     margin-bottom: var(--mobileSpacer);
   }
 
@@ -2134,8 +2172,27 @@ textarea {
   }
 }
 
-@media (min-width: 801px) {
+@media (max-width: 426px) {
   .mobile-header {
     display: none;
   }
+
+  .menukortKolonne.drikkevarer ul {
+    columns: 2;
+    column-gap: 2rem;
+    font-size: 12px;
+}
+.menukortKolonne {
+    flex: 1;
+    min-width: 280px;
+  margin: 0;
+    font-size: 12px;
+    padding-inline: var(--mobileMediumSpacer);
+}
+
+.menukortKolonne h2 {
+    font-size: 20px;
+}
+
+
 }
