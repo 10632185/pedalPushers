@@ -1,12 +1,3 @@
-* {
-    box-sizing: border-box;
-}
- 
-body {
-    margin: 0;
-    background-color: var(--lightGrey);
-}
- 
 /* TYPOGRAPHY */
 /* ___________________________________ */
 /* Brødtekst */
@@ -15,6 +6,16 @@ body {
 /* Overskrifter */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
  
+
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    background-color: var(--lightGrey);
+}
+
 /* VARIABLES */
 /* ___________________________________ */
  
@@ -121,7 +122,7 @@ nav .hoverA.active:hover::after {
   transform: translateX(-50%) scaleX(0);
 }
 
-nav a {
+nav a{
   position: relative;            
   text-decoration: none;
   color: var(--lightBrown);
@@ -131,7 +132,7 @@ nav a {
   padding-top: 5px;   
   width: 155px;    
   text-align: center;  
-  
+  font-family: "Playfair Display", serif;
 }
 
 nav .hoverA::after {
