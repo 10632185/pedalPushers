@@ -1039,8 +1039,8 @@ textarea {
 
     .bike-card {
   display: grid;
-  grid-template-rows: auto 1fr; /* image + content */
-  height: 100%;
+  grid-template-rows: auto 1fr;
+  height: 25rem;
   border: 1px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
