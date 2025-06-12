@@ -20,7 +20,6 @@ body {
  
 :root {
   /* Farver */
- 
   --deepOrange: #D08124;
   --lightBrown: #772608;
   --lightGrey: #F7F4F4; 
@@ -34,7 +33,6 @@ body {
   --footerBackground: #8B7459;
  
   /* Spacere */
- 
   --mobileSmallSpacer: 30px;
   --mobileMediumSpacer: 38px;
   --mobileLargeSpacer: 45px;
@@ -45,7 +43,6 @@ body {
   --desktopXLargeSpacer: 110px;
  
   /* Font weight */
- 
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
