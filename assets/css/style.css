@@ -600,11 +600,12 @@ position: absolute;
 .column h2 {
   margin-bottom: var(--desktopSmallSpacer);
   font-weight: normal;
-  font-size: 3em;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .column h3 {
-  font-size: 2em;
+  font-size: 1.5rem;
   padding-bottom: 1.6rem;
   font-weight: lighter;
 }
