@@ -2173,8 +2173,27 @@ textarea {
   }
 }
 
-@media (min-width: 801px) {
+@media (max-width: 426px) {
   .mobile-header {
     display: none;
   }
+
+  .menukortKolonne.drikkevarer ul {
+    columns: 2;
+    column-gap: 2rem;
+    font-size: 12px;
+}
+.menukortKolonne {
+    flex: 1;
+    min-width: 280px;
+  margin: 0;
+    font-size: 12px;
+    padding-inline: var(--mobileMediumSpacer);
+}
+
+.menukortKolonne h2 {
+    font-size: 20px;
+}
+
+
 }
