@@ -151,13 +151,12 @@ nav .hoverA:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* ___________ */
+/* ________________________________________________________________*/
 /* NAVBAR PHONE */
 #menu__toggle {
   opacity: 0;
   position: absolute;
 }
-
 
 /* Navbar with logo */
 .mobile-logo-bar {
@@ -430,8 +429,6 @@ nav .hoverA:hover::after {
 
 .forsideImg {
   width: 100%;
-  /* height: 80vh; */
-  /* den normale height var 80 vh, men vi kan lege lidt med det og så se hvad vi bliver enige om i gruppen :) */
   height: 70vh;
   object-fit: cover;
   display: block;
@@ -1268,7 +1265,7 @@ h1, h2 {
 /* _____________________________________________________________________________ */
 @media (max-width: 1024px) {
   nav {
-    gap: 1.5rem; /* reduce spacing between links */
+    gap: 1.5rem;
   }
 
   nav a {
