@@ -1024,39 +1024,53 @@ textarea {
       cursor: pointer;
       user-select: none;
     }
+
     .filters input[type="checkbox"] {
       margin-right: 0.3rem;
       cursor: pointer;
     }
+
     .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 2rem;
-      padding: 2rem;
+     margin: var(--dekstopLargeSpacer);
     }
+
     .bike-card {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+  display: grid;
+  grid-template-rows: auto 1fr; /* image + content */
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
     .bike-card img {
       width: 100%;
       height: auto;
       display: block;
     }
-    .info {
-      padding: 1rem;
-    }
-    .info h3 {
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+
+  .info h3 {
       margin-top: 0;
       font-size: 1.2rem;
     }
-    .price {
-      font-weight: bold;
-      color: #0c7d0c;
-      margin-top: 0.5rem;
-    }
+
+ .price {
+  font-weight: bold;
+  color: #0c7d0c;
+  margin-top: auto;
+}
+
 /* ____________________________________________________________________________________________________________________________________________________________________ */
 /* Her styles Begivenheder */
 
